@@ -2,6 +2,7 @@
 // Tek component ve veri setimiz olduğundan kullanmasakta olurdu fakat geniş çapta birden fazla gerektiğinde bunu kullanmak daha iyidir
 
 import BlogMain from "@/components/blog/BlogMain";
+import ConvexMain from "@/components/ConvexMain";
 import { getPosts } from "@/lib/getPosts";
 import { Suspense } from "react";
 
@@ -14,6 +15,9 @@ export default async function Home() {
 
         <Suspense fallback={<div>Sincapp Blog || Loading...</div>}>
           <BlogMain posts={blogPosts} />
+        </Suspense>
+        <Suspense>
+          <ConvexMain />
         </Suspense>
       </div>
     </main>

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import BerkeFooter from "@/components/Footer";
+import { ConvexClientProvider } from "./ConvexClientProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,9 +30,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Nav />
-        {children}
-        <BerkeFooter />
+        <ConvexClientProvider>
+          <Nav />
+          {children}
+          <BerkeFooter />
+        </ConvexClientProvider>
       </body>
     </html>
   );
