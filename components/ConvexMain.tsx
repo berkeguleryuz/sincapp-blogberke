@@ -8,9 +8,9 @@ export default function ConvexMain() {
   const tasks = useQuery(api.tasks.get);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 border-t-2 my-24">
-      {tasks?.map(({ id, text, isCompleted }) => (
+      {tasks?.map(({ _id, text, isCompleted }) => (
         <div
-          key={id}
+          key={_id}
           className={twMerge(
             `border w-full h-full p-24 bg-neutral-700 ${isCompleted ? "text-lime-500" : "text-blue-500"}`,
           )}>
