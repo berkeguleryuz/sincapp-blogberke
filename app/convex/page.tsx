@@ -1,5 +1,5 @@
 // Next 15 react 19 için vercel update atılmıştır --force
-// convex vercel deploy test .env updatei next 15
+// convex vercel deploy test .env updatei next 15 new
 
 "use client";
 
