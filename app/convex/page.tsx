@@ -1,3 +1,5 @@
+// Next 15 react 19 için vercel update atılmıştır --force
+
 "use client";
 
 import { useQuery } from "convex/react";
